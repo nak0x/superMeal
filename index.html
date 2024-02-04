@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meals for you</title>
+    <script src="https://kit.fontawesome.com/70f6881b36.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Add popup-open into page-content class for popup mode -->
+    <div id="page-content" class="">
+        <section id="hero">
+            <div class="row">
+                <div class="col">
+                    <h1>Meals !</h1>
+                    <p>Ton meilleur amis pour tes recettes</p>
+                    <a href="#search"><button>Trouver une recette</button></a>
+                </div>
+                <div class="col">
+                    <div id="recomandation">
+                        <!-- Fill in JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="search">
+            <form class="searchbar" id="searchbar-form">
+                <input type="text" name="query" placeholder="Search..." id="query">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div id="search-result">
+                <span class="desactivated">There is no result...</span>
+            </div>
+            <div id="search-action-container">
+            </div>
+        </section>
+        <section id="meals">
+            <div class="filter-tab-container">
+                <span class="custom-dropdown">
+                    <select id="area-select" onchange="loadAmazon(0)">
+                        <option value="">Country...</option>
+                        <!-- In Js -->
+                    </select>
+                </span>
+                <span class="custom-dropdown">
+                    <select id="category-select" onchange="loadAmazon(1)">
+                        <option value="">Category...</option>
+                        <!-- In Js -->
+                    </select>
+                </span>
+                <span class="custom-dropdown">
+                    <select id="ingredients-select" onchange="loadAmazon(2)">
+                        <option value="">Ingredient...</option>
+                        <!-- In Js -->
+                    </select>
+                </span>
+            </div>
+            <div id="meals-container">
+                <!-- Fill in JS -->
+                
+            </div>
+        </section>
+        <div class="details-popup-container hidden">
+            <!-- In Js -->
+        </div>
+    </div>
+    <footer>Théo LESAGE - All Right Reserved | API : <a href="https://www.themealdb.com/" target="_blank">TheMealDb</a></footer>
+    <script src="./app.js"></script>
+</body>
+</html>
