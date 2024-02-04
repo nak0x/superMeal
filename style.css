@@ -47,6 +47,8 @@ button{
     grid-auto-columns: 1fr;
     max-width: 1920px;
     place-self: center;
+    width: 100%;
+    height: 100%;
 }
 
 .col{
@@ -55,6 +57,7 @@ button{
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
+    width: 100%;
 }
 
 h2{
@@ -70,6 +73,8 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .recomandation-details{
@@ -83,6 +88,12 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#recomandation img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 section#search{
@@ -401,14 +412,6 @@ p.tag{
     font-weight: 420;
 }
 
-@media screen and (max-width: 1700px){
-    .row{
-        grid-auto-flow: row;
-        grid-auto-rows: auto;
-        gap: 3rem;
-    }
-}
-
 /* Amazon part */
 
 #meals{
@@ -558,4 +561,38 @@ footer a{
     text-decoration: none;
     color: inherit;
     opacity: 50%;
+}
+
+/* Responsivness */
+
+@media screen and (max-width: 512px) {
+    #hero{
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .row{
+        grid-auto-flow: row;
+        grid-auto-rows: auto;
+        gap: 1rem;
+    }
+
+    .main-title{
+        font-size: 4rem;
+    }
+
+    #search{
+        padding: 1rem;
+    }
+
+    #query{
+        min-width: unset;
+        width: 100%;
+    }
+
+    #search-result .search-item-details{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
 }
